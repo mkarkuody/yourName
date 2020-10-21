@@ -1,0 +1,112 @@
+
+body   {
+  background-image: url("./search2.jpg");
+  margin-top: 100px;
+  text-align: center;
+  background-size: cover;
+    background-position: center;
+    color: rgb(252, 252, 250);
+    padding-top: 120px;
+        }
+body:hover{
+  color: rgb(253, 249, 4);
+}
+
+.responsive-card-table {
+    border-collapse: collapse;
+  }
+  
+  .responsive-card-table.unstriped tbody {
+    background-color: transparent;
+  }
+  
+  .responsive-card-table th {
+    background-color: #0c0b0b7c;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  
+  .responsive-card-table tr,
+  .responsive-card-table th,
+  .responsive-card-table td {
+    border: 1px solid #0a0a0a;
+    height: 50px;
+  }
+  
+  @media screen and (max-width: 640px) {
+    .responsive-card-table {
+      
+    }
+    .responsive-card-table thead tr {
+      position: absolute;
+      top: -9999em;
+      left: -9999em;
+    }
+    .responsive-card-table tr {
+      border: 1px solid #0a0a0a75;
+      display: block;
+    }
+    .responsive-card-table tr + tr {
+      margin-top: 1.5rem;
+    }
+    .responsive-card-table td {
+      border: none;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-justify-content: flex-start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      border-bottom: 1px solid #0a0a0a5d;
+      padding-left: 50%;
+      position: relative;
+    }
+    .responsive-card-table td:before {
+      content: attr(data-label);
+      display: inline-block;
+      font-weight: bold;
+      line-height: 1.5;
+      margin-left: -100%;
+      width: 100%;
+      position: relative;
+      z-index: 1;
+    }
+    .responsive-card-table td:after {
+      content: '';
+      position: absolute;
+      background: #e6e6e6;
+      width: 45%;
+      height: 95%;
+      left: 1px;
+      top: 1px;
+      z-index: 0;
+    }
+  }
+  .gohome-btn {
+    position: fixed;
+    bottom: 70px;
+    margin-left: 30%;
+    padding: .7rem;
+    background-color: aqua;
+    border-radius: .5rem;
+    width: 100px;
+
+}
+#table{
+  position: relative;
+  margin: auto;
+}
+
+.gohome-btn:hover {
+    box-shadow: 0 0.4rem 2.4rem 0 rgba(255,255,0,0.5);
+   
+}
+  h1{
+    font-size: 60px;
+    background-size: 80px;
+    background-color: rgba(0, 0, 0, 0.384);
+    background-size: auto;
+  }

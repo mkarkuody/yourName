@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>homepage</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
+        integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <!-- Create header section -->
+    <!-- Create text area 
+        1) Pre-put "Type first name here"
+        2) Takes user's name and runs the two api's  -->
+    <div class="hero-section">
+        <div class="hero-section-text">
+            <h1 id="topline">Submit yourself to the matrix</h1>
+            <!-- Note: This code was produced by Imran Khan @DevHoot (Merdad)-->
+            <label for="Speech Recognition"></label>
+            <h3>Click and say your name below in the search area</h3>
+            <input type="text" name="" id="speechToText" placeholder='Type your name  or "Click" and say your name' onclick="record()">
+            <br>
+            <!-- <a href="results.html"> -->
+            <input type="button" name="submitbutton" id="submit" value="Click here to submit !"></a>
+            <!-- this id 'submit' has been created for css and also evenlistener Jqueri/JS please don't rename or change it. (Merdad) -->
+        </div>
+
+    </div>
+
+
+    <!-- all JS and Css files have been added to this HTML (Merdad) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src=".script.js"></script>
+    <!-- <script src="./js/result.js"></script> -->
+
+</body>
+
+</html>

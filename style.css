@@ -1,0 +1,89 @@
+body{
+    background-image: url("./names.jpg");
+}
+
+.hero-section {
+    background-size: cover;
+    height: 70vh;
+    text-align: center;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 0%;
+    padding-top: 0%;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}  
+
+#submit{
+    margin-top: 20px;
+    padding: .7rem;
+    background-color: aqua;
+    border-radius: .5rem;
+}
+#submit:hover {
+    box-shadow: 0 0.4rem 2.4rem 0 rgba(255,255,0,0.5);
+   
+}
+  
+
+#topline{
+    background-color: rgba(0, 0, 0, 0.384);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 80px;
+}
+#topline:hover{
+    color: yellow;
+    text-shadow: yellow 2rem;
+    transform: matrix();
+
+}
+h3{
+    background-color: rgba(0, 0, 0, 0.384);
+}
+h3:hover{
+    color: yellow;
+    border-width: 10px;
+    border: black;
+}
+.hero-section .hero-section-text {
+    color: #fefefe;
+    text-shadow: 1px 1px 2px #0a0a0a;
+} 
+
+.input-group-rounded .input-group-field {
+    border-radius: 5000px 0 0 5000px;
+    padding-left: 1rem;
+}  
+
+.input-group-rounded .input-group-button .button {
+    border-radius: 0 5000px 5000px 0;
+    font-size: 0.8rem;
+}
+.hero-section {
+    background-image: url("names.jpg");
+    background-size: cover;
+    height: 100vh;
+    text-align: center;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}  
+
+.callout-hover-reveal .callout-footer {
+    display: none;
+  }
+  
+  ​.toShow {
+      display:none;
+  }
