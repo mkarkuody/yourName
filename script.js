@@ -12,7 +12,7 @@ function record() {
     var recognition = new webkitSpeechRecognition();
     recognition.lang = "en-GB";
 
-    recognition.onresult = function(event) {
+    recognition.onresult = function (event) {
         // console.log(event);
         document.getElementById('speechToText').value = event.results[0][0].transcript;
     }
@@ -21,13 +21,16 @@ function record() {
 }
 // end of voice recognition(Merdad)
 
-$("#submit").on("click", function (event) {
-    window.location.assign("./results.html")
+
+$("#submit").on("click", function start(event) {
     event.preventDefault();
     var name = $("#speechToText").val();
+    var display=document.querySelector("section")
+    display.style.display= "block";
+    var display=document.querySelector("container")
+    display.style.display= "none";
     var queryUrl = "https://api.agify.io?name=" + name;
     var queryUrl2 = "https://api.nationalize.io?name=" + name;
-
     $.ajax({
         url: queryUrl,
         method: "GET"
@@ -47,15 +50,12 @@ $("#submit").on("click", function (event) {
         var nationalityResult = $("<td>").text(response.country[0].country_id);
         $("#nationality").append(nationalityResult);
     })
-
+    $("#yourName").text(name)
+    $("#first").text(name)
 });
-var nameEl= document.getElementById("speechToText")
-var yourName= document.getElementById("yourName")
-var value= nameEl.value;
-yourName.innerHTML=value;
 
-$(document).ready(function () {
-    $("#submit").click(function () {
-        $(".hero-section-text").toggle(".results");
-    });
-});
+
+
+
+  
+  

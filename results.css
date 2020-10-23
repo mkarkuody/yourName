@@ -1,13 +1,18 @@
 
-body   {
+body section   {
   background-image: url("./search2.jpg");
-  margin-top: 100px;
+  font-family: 'Fredericka the Great', cursive;
   text-align: center;
   background-size: cover;
     background-position: center;
-    color: rgb(252, 252, 250);
-    padding-top: 120px;
-        }
+    font-family: ;
+    color: rgb(255, 255, 253);
+}
+    .hidden{
+
+display: none;
+    }
+        
 body:hover{
   color: rgb(253, 249, 4);
 }
@@ -21,7 +26,7 @@ body:hover{
   }
   
   .responsive-card-table th {
-    background-color: #0c0b0b7c;
+    background-color: #0806064b;
     padding-left: 40px;
     padding-right: 40px;
   }
@@ -77,7 +82,6 @@ body:hover{
     .responsive-card-table td:after {
       content: '';
       position: absolute;
-      background: #e6e6e6;
       width: 45%;
       height: 95%;
       left: 1px;
@@ -98,6 +102,7 @@ body:hover{
 #table{
   position: relative;
   margin: auto;
+  background-color: rgba(0, 0, 139, 0.479);
 }
 
 .gohome-btn:hover {
@@ -110,3 +115,40 @@ body:hover{
     background-color: rgba(0, 0, 0, 0.384);
     background-size: auto;
   }
+  section{
+    display: none;
+    margin-top: 15%;
+  }
+
+  #yourNmae{
+    font-family: 'Monoton', cursive;
+   
+  }
+  #first{
+    color: rgb(7, 2, 51);
+    font-size: 30px;
+    font-weight: bold;
+    margin-left:  15%;
+  }
+  #nationality{
+    color:  rgb(7, 2, 51);
+    font-size: 30px;
+    font-weight: bold;
+    margin-left:  15%;
+  }
+  #age{
+    color:  rgb(7, 2, 51);
+    font-size: 30px;
+    font-weight: bold;
+    margin-left:  15%;
+  }
+  #home{
+    margin-top: 40px;
+    padding: .7rem;
+    background-color: aqua;
+    border-radius: .5rem;
+}
+#home:hover {
+    box-shadow: 0 0.4rem 2.4rem 0 rgba(255,255,0,0.5);
+   
+}
