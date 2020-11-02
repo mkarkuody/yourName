@@ -1,5 +1,6 @@
 # yourName
 Your Name by Merdad Karkudi;
+<img src="Your%20Name.jpg">
 project repository link : https://github.com/mkarkuody/yourName
 project link : https://mkarkuody.github.io/yourName/
 video of application demo: https://uwseafsfpt082ohb6168.slack.com/files/U0194AT5ZRC/F01DVQEAE1E/your_name.mp4
