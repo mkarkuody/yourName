@@ -1,60 +1,3 @@
-
-// added this code for the result function in HTML (Merdad)
-$(function () {
-    $('[data-callout-hover-reveal]').hover(function () {
-        $(this).find('.callout-footer').slideDown(250);
-    }, function () {
-        $(this).find('.callout-footer').slideUp(250);
-    });
-})
-// added this function for converting voice to text(Merdad)
-function record() {
-    var recognition = new webkitSpeechRecognition();
-    recognition.lang = "en-GB";
-
-    recognition.onresult = function (event) {
-        // console.log(event);
-        document.getElementById('speechToText').value = event.results[0][0].transcript;
-    }
-    recognition.start();
-
-}
-// end of voice recognition(Merdad)
-
-
-$("#submit").on("click", function start(event) {
-    event.preventDefault();
-    var name = $("#speechToText").val();
-    var display=document.querySelector("section")
-    display.style.display= "block";
-    var display=document.querySelector("container")
-    display.style.display= "none";
-    var queryUrl = "https://api.agify.io?name=" + name;
-    var queryUrl2 = "https://api.nationalize.io?name=" + name;
-    $.ajax({
-        url: queryUrl,
-        method: "GET"
-    }).then(function (response) {
-        console.log(response);
-        localStorage.setItem("age", JSON.stringify(response));
-        var ageResult = $("<td>").text(response.age);
-        $("#age").append(ageResult);
-    });
-
-    $.ajax({
-        url: queryUrl2,
-        method: "GET"
-    }).then(function (response) {
-        console.log(response);
-        localStorage.setItem("nationality", JSON.stringify(response));
-        var nationalityResult = $("<td>").text(response.country[0].country_id);
-        $("#nationality").append(nationalityResult);
-    })
-    $("#yourName").text(name)
-    $("#first").text(name)
-});
-// got codes below from https://gist.github.com/incredimike/1469814#file-variouscountrylistformats-js-L498 (Merdad)
-// how to access objet value in an object 
 const countryListAlpha2 = {
     "AF": "Afghanistan",
     "AL": "Albania",
@@ -306,3 +249,62 @@ const countryListAlpha2 = {
     "ZW": "Zimbabwe",
     "AX": "Åland Islands"
 };
+// added this code for the result function in HTML (Merdad)
+$(function () {
+    $('[data-callout-hover-reveal]').hover(function () {
+        $(this).find('.callout-footer').slideDown(250);
+    }, function () {
+        $(this).find('.callout-footer').slideUp(250);
+    });
+})
+// added this function for converting voice to text(Merdad)
+function record() {
+    var recognition = new webkitSpeechRecognition();
+    recognition.lang = "en-GB";
+
+    recognition.onresult = function (event) {
+        // console.log(event);
+        document.getElementById('speechToText').value = event.results[0][0].transcript;
+    }
+    recognition.start();
+
+}
+// end of voice recognition(Merdad)
+
+
+$("#submit").on("click", function start(event) {
+    event.preventDefault();
+    var name = $("#speechToText").val();
+    var display=document.querySelector("section")
+    display.style.display= "block";
+    var display=document.querySelector("container")
+    display.style.display= "none";
+    var queryUrl = "https://api.agify.io?name=" + name;
+    var queryUrl2 = "https://api.nationalize.io?name=" + name;
+    $.ajax({
+        url: queryUrl,
+        method: "GET"
+    }).then(function (response) {
+        console.log(response);
+        localStorage.setItem("age", JSON.stringify(response));
+        var ageResult = $("<td>").text(response.age);
+        $("#age").append(ageResult);
+    });
+
+    $.ajax({
+        url: queryUrl2,
+        method: "GET"
+    }).then(function (response) {
+        console.log(response);
+        localStorage.setItem("nationality", JSON.stringify(response));
+        var iso= response.country[0].country_id;
+        var nationalityResult = $("<td>").text(response.country[0].country_id);
+        $("#nationality").append(countryListAlpha2[iso]);
+    
+        console.log();
+    })
+    $("#yourName").text(name)
+    $("#first").text(name)
+});
+// got codes below from https://gist.github.com/incredimike/1469814#file-variouscountrylistformats-js-L498 (Merdad)
+// how to access objet value in an object 
