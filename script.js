@@ -103,7 +103,7 @@ const countryListAlpha2 = {
     "IS": "Iceland",
     "IN": "India",
     "ID": "Indonesia",
-    "IR": "Iran (Islamic Republic of)",
+    "IR": "Iran",
     "IQ": "Iraq",
     "IE": "Ireland",
     "IM": "Isle of Man",
