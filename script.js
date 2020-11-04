@@ -287,8 +287,9 @@ $("#submit").on("click", function start(event) {
     }).then(function (response) {
         console.log(response);
         localStorage.setItem("age", JSON.stringify(response));
-        var ageResult = $("<td>").text(response.age);
-        $("#age").append(ageResult);
+        var ageEl= response.age;
+        // var ageResult = $("<td>").text(response.age);
+        $("#age").append(ageEl);
     });
 
     $.ajax({
@@ -298,7 +299,7 @@ $("#submit").on("click", function start(event) {
         console.log(response);
         localStorage.setItem("nationality", JSON.stringify(response));
         var iso= response.country[0].country_id;
-        var nationalityResult = $("<td>").text(response.country[0].country_id);
+        // var nationalityResult = $("<td>").text(response.country[0].country_id);
         $("#nationality").append(countryListAlpha2[iso]);
     
         console.log();
